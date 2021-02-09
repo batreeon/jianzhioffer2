@@ -25,7 +25,8 @@
             // fmt.Println(path)
             // fmt.Println(ans)
             tmp := make([]int,len(path))
-            copy(tmp,path)//注意这两句是不能省的，跟golang语言的特性有关，省了就有错，也不能用tmp := path[:]
+			copy(tmp,path)//注意这两句是不能省的，跟golang语言的特性有关，省了就有错，也不能用tmp := path[:]
+			//错误原因应该是共享了path,后面结果会修改前面的结果
             
             ans = append(ans,tmp)
             // fmt.Println(len(ans))
