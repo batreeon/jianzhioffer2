@@ -10,7 +10,7 @@ func quickSort(nums []int,start int,end int) {
 	}
 }
 func partition(nums []int,p int,r int) int {
-	x := nums[r-1]
+	x := nums[r]
 	i := p-1
 	for j := p ; j < r ; j++ {
 		if nums[j] < x {
